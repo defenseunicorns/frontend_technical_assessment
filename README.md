@@ -6,6 +6,8 @@ UDS UI is analogous to a dashboard for a Kubernetes cluster, providing views and
 
 In this challenge, we ask you to implement a "Cluster Overview" page. As you navigate the challenge, focus on working as you would normally. We do not expect you to spend more than **four hours** on this challenge.
 
+To complete the exercise please create a new repository from this template and push your changes to it. When complete email your recruiting contact at Defense Unicorns. The hiring team will then evaluate your submission, and if it meets the standard, move onto an in-person review of the submission where enhancements and other changes can be discussed.
+
 ### Evaluation Criteria
 
 Your submission will be evaluated based on:
@@ -22,7 +24,7 @@ Your submission will be evaluated based on:
 **Prerequisites**
 
 - [Docker](https://docs.docker.com/engine/install/)
-- (optional) [Jetify DevBox](https://www.jetify.com/docs/devbox/quickstart/), you _may_ use devbox, but it is not required. see [devbox.json](devbox.json) for dependencies and versions used.
+- (optional) [Jetify DevBox](https://www.jetify.com/docs/devbox/quickstart/), you _may_ use `devbox`, but it is not required. See [devbox.json](devbox.json) for dependencies and versions used.
 
 **Setup**
 
@@ -31,7 +33,7 @@ Your submission will be evaluated based on:
 | 1 | `git clone https://github.com/defenseunicorns/frontend-technical-assessment.git` | Clone this repository |
 | 2 | `k3d cluster create uds-ui --image rancher/k3s:v1.33.0-k3s1` | Creates a lightweight Kubernetes cluster. Required for the API to interact with. |
 | 3 | Download the API binary for your system | The binaries can be found [here](https://github.com/defenseunicorns/frontend-technical-assessment/releases) (use the latest release) |
-| 4 | `./uds-api-<OS>-<ARCH>` (e.g. `./uds-api-darwin-arm64`) | Runs the API. Verify at `https://runtime-local.uds.dev:8443/healthz` (errors expected due to missing UDS custom resources) |
+| 4 | `./uds-api-<OS>-<ARCH>` (e.g. `./uds-api-darwin-arm64`) | Runs the API. Verify at `https://runtime-local.uds.dev:8443/healthz` (errors expected due to missing UDS custom resources).  You may need to make the download executable with `chmod` and on some macOS versions ensure it can run from the Security pane of System Settings. |
 | 5 | Access in a browser `https://runtime-local.uds.dev:8443/healthz` | Verify the API is running. You could also curl or wget |
 | 6 | Access in a browser `https://runtime-local.uds.dev:8443/swagger/index.html` | View the Swagger API documentation |
 | 7 | `cd ui && npm i && npm run dev` | Installs dependencies and runs the UI. Accessible at `http://localhost:5173` |
@@ -56,7 +58,7 @@ Already implemented as an example. This shows the number of active pods running 
 
 This shows the number of UDS packages deployed in the cluster `kubectl get packages -A`
 
-NOTE: You aren't required to deploy UDS packages, but the api endpoint `api/v1/resources/configs/uds-packages` is available.
+NOTE: You aren't required to deploy UDS packages, but the api endpoint `GET /api/v1/resources/configs/uds-packages` is available.
 
 #### CPU and Memory Usage
 
@@ -68,8 +70,7 @@ This shows applications with a link to the application. The required data is not
 
 #### Core Services
 
-This shows Core Services availability. The data is already available in the component for you. Expect all services to have
-status "Not Installed"
+This shows Core Services availability. The data is already available in the component for you. Expect all services to have status "Not Installed"
 
 #### CVE Reports
 
@@ -99,8 +100,7 @@ A table of events from the cluster. see `GET /api/v1/resources/events`
 |---------|-------|
 | `k3d cluster delete uds-ui` | Delete all k3d kubernetes clusters |
 
-## Submission
+## Deliverables
 
-1. populate a response to [ChallengeQuestions.md](ChallengeQuestions.md)
-2. Ensure all changes have been committed
-3. push your changes to a branch
+1. Your implementation of the features committed to your copy of the template in GitHub
+2. A populated response to [ChallengeQuestions.md](ChallengeQuestions.md)
