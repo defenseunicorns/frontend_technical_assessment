@@ -33,7 +33,7 @@ Your submission will be evaluated based on:
 | 1 | `git clone https://github.com/defenseunicorns/frontend-technical-assessment.git` | Clone this repository |
 | 2 | `k3d cluster create uds-ui --image rancher/k3s:v1.33.0-k3s1` | Creates a lightweight Kubernetes cluster. Required for the API to interact with. |
 | 3 | Download the API binary for your system | The binaries can be found [here](https://github.com/defenseunicorns/frontend-technical-assessment/releases) (use the latest release) |
-| 4 | `./uds-api-<OS>-<ARCH>` (e.g. `./uds-api-darwin-arm64`) | Runs the API. Verify at `https://runtime-local.uds.dev:8443/healthz` (errors expected due to missing UDS custom resources).  You may need to make the download executable with `chmod` and on some macOS versions ensure it can run from the Security pane of System Settings. |
+| 4 | `./uds-api-<OS>-<ARCH>` (e.g. `./uds-api-darwin-arm64`) | Runs the API. Verify at `https://runtime-local.uds.dev:8443/healthz` (errors expected due to missing UDS custom resources).  You may need to make the download executable with `chmod` and on some macOS versions to ensure it can run from the Security pane of System Settings. |
 | 5 | Access in a browser `https://runtime-local.uds.dev:8443/healthz` | Verify the API is running. You could also curl or wget |
 | 6 | Access in a browser `https://runtime-local.uds.dev:8443/swagger/index.html` | View the Swagger API documentation |
 | 7 | `cd ui && npm i && npm run dev` | Installs dependencies and runs the UI. Accessible at `http://localhost:5173` |
