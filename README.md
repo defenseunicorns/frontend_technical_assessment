@@ -4,7 +4,12 @@
 
 UDS UI is analogous to a dashboard for a Kubernetes cluster, providing views and insights into the cluster's resources and health.
 
-In this challenge, we ask you to implement a "Cluster Overview" page. As you navigate the challenge, focus on working as you would normally. We do not expect you to spend more than **four hours** on this challenge.
+In this challenge, we ask you to implement a "Cluster Overview" page. As you navigate the challenge, focus on working as you would normally.
+
+To complete the exercise please create a new repository from this template and push your changes to it. When complete email your recruiting contact at Defense Unicorns. The hiring team will then evaluate your submission, and if it meets the standard, move onto an in-person review of the submission where enhancements and other changes can be discussed.
+
+> [!NOTE]
+> We do not expect you to spend more than **four hours** on this challenge. You are not expected to fully complete challenge, but to instead choose where to focus your time and effort.
 
 To complete the exercise please create a new repository from this template and push your changes to it. When complete email your recruiting contact at Defense Unicorns. The hiring team will then evaluate your submission, and if it meets the standard, move onto an in-person review of the submission where enhancements and other changes can be discussed.
 
