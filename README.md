@@ -11,6 +11,8 @@ To complete the exercise please create a new repository from this template and p
 > [!NOTE]
 > We do not expect you to spend more than **four hours** on this challenge. You are not expected to fully complete challenge, but to instead choose where to focus your time and effort.
 
+To complete the exercise please create a new repository from this template and push your changes to it. When complete email your recruiting contact at Defense Unicorns. The hiring team will then evaluate your submission, and if it meets the standard, move onto an in-person review of the submission where enhancements and other changes can be discussed.
+
 ### Evaluation Criteria
 
 Your submission will be evaluated based on:
@@ -36,7 +38,7 @@ Your submission will be evaluated based on:
 | 1 | `git clone https://github.com/defenseunicorns/frontend-technical-assessment.git` | Clone this repository |
 | 2 | `k3d cluster create uds-ui --image rancher/k3s:v1.33.0-k3s1` | Creates a lightweight Kubernetes cluster. Required for the API to interact with. |
 | 3 | Download the API binary for your system | The binaries can be found [here](https://github.com/defenseunicorns/frontend-technical-assessment/releases) (use the latest release) |
-| 4 | `./uds-api-<OS>-<ARCH>` (e.g. `./uds-api-darwin-arm64`) | Runs the API. Verify at `https://runtime-local.uds.dev:8443/healthz` (errors expected due to missing UDS custom resources). You may need to make the download executable with `chmod` and on some macOS versions to ensure it can run from the Security pane of System Settings. |
+| 4 | `./uds-api-<OS>-<ARCH>` (e.g. `./uds-api-darwin-arm64`) | Runs the API. Verify at `https://runtime-local.uds.dev:8443/healthz` (errors expected due to missing UDS custom resources).  You may need to make the download executable with `chmod` and on some macOS versions to ensure it can run from the Security pane of System Settings. |
 | 5 | Access in a browser `https://runtime-local.uds.dev:8443/healthz` | Verify the API is running. You could also curl or wget |
 | 6 | Access in a browser `https://runtime-local.uds.dev:8443/swagger/index.html` | View the Swagger API documentation |
 | 7 | `cd ui && npm i && npm run dev` | Installs dependencies and runs the UI. Accessible at `http://localhost:5173` |
